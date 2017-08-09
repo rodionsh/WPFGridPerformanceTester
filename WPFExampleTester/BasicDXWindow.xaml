@@ -1,0 +1,16 @@
+﻿<dx:DXWindow
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:Views="clr-namespace:WPFExampleTester.Views"
+    x:Class="WPFExampleTester.BasicDXWindow"
+    Title="BasicDXWindow" 
+    Height="650" Width="800" 
+    WindowStartupLocation="CenterScreen">
+
+    <Grid>
+        <Views:BasicDXView x:Name="ABook" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Center" />
+        <Views:BasicDXView x:Name="BBook" HorizontalAlignment="Center" Margin="10" VerticalAlignment="Center" />
+        <Views:BasicDXView x:Name="CBook" HorizontalAlignment="Right" Margin="10" VerticalAlignment="Center" />
+    </Grid>
+</dx:DXWindow>

@@ -1,0 +1,43 @@
+﻿<UserControl 
+    x:Class="WPFExampleTester.Views.BasicView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:ViewModels="clr-namespace:WPFExampleTester.ViewModels"
+    xmlns:local="clr-namespace:WPFExampleTester.Views"
+    mc:Ignorable="d">
+
+    <UserControl.DataContext>
+        <ViewModels:BasicViewModel/>
+    </UserControl.DataContext>
+
+    <Grid>
+        <StackPanel Orientation="Vertical">
+
+            <DataGrid Name="BookControl" Grid.Row="0" Grid.Column="0"
+                  Height="500" FontSize="11"
+                  AutoGenerateColumns="False" 
+                  CanUserAddRows="False"
+                  CanUserDeleteRows="False" 
+                  CanUserReorderColumns="False" 
+                  CanUserResizeColumns="False"
+                  CanUserResizeRows="False" 
+                  CanUserSortColumns="False" 
+                  SelectionMode="Single"
+                  ItemsSource="{Binding SortedBookView}" 
+                  local:UpdatesLockHelper.IsUpdatesLocked="{Binding IsUpdatesLocked}">
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="BWork" Binding="{Binding BWork}" />
+                    <DataGridTextColumn Header="Bids" Binding="{Binding Bids}" />
+                    <DataGridTextColumn Header="Price" Binding="{Binding Price}" />
+                    <DataGridTextColumn Header="Asks" Binding="{Binding Asks}" />
+                    <DataGridTextColumn Header="AWork" Binding="{Binding AWork}" />
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <Button Grid.Row="1" Grid.Column="0" Content="Randomize" Command="{Binding Randomize}" />
+        </StackPanel>
+    </Grid>
+</UserControl>
