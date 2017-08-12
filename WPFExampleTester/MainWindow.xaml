@@ -18,6 +18,12 @@
                     <dxr:RibbonPageGroup Caption="File">
                         <dxb:BarButtonItem x:Name="newItem" Content="New Generic" Glyph="{dx:DXImage Image=New_16x16.png}" LargeGlyph="{dx:DXImage Image=New_32x32.png}" ItemClick="newItem_ItemClick"/>
                         <dxb:BarButtonItem x:Name="newDXItem" Content="New DevExpress" Glyph="{dx:DXImage Image=New_16x16.png}" LargeGlyph="{dx:DXImage Image=New_32x32.png}" ItemClick="newDXItem_ItemClick"/>
+                        <dxb:BarButtonItem x:Name="newItemMT" Content="New Generic MultiThreaded" Glyph="{dx:DXImage Image=New_16x16.png}" LargeGlyph="{dx:DXImage Image=New_32x32.png}" ItemClick="NewItemMT_OnItemClick"/>
+                        <dxb:BarButtonItem x:Name="newDXItemMT" Content="New DevExpress MultiThreaded" Glyph="{dx:DXImage Image=New_16x16.png}" LargeGlyph="{dx:DXImage Image=New_32x32.png}" ItemClick="NewDXItemMT_OnItemClick"/>
+                        <dxb:BarButtonItem x:Name="newSyncfusionItem" Content="New Syncfusion" Glyph="{dx:DXImage Image=New_16x16.png}" LargeGlyph="{dx:DXImage Image=New_32x32.png}" ItemClick="NewSyncfusionItem_OnItemClick"/>
+                        <dxb:BarButtonItem x:Name="newTelerikItem" Content="New Telerik" Glyph="{dx:DXImage Image=New_16x16.png}" LargeGlyph="{dx:DXImage Image=New_32x32.png}" ItemClick="NewTelerikItem_OnItemClick"/>
+                        <dxb:BarButtonItem x:Name="newBasicMutlithreaded" Content="New Basic Mutlitrheaded" Glyph="{dx:DXImage Image=New_16x16.png}" LargeGlyph="{dx:DXImage Image=New_32x32.png}" ItemClick="NewBasicMutlithreaded_OnItemClick"/>
+                        <dxb:BarButtonItem x:Name="newC1Item" Content="New C1 Item" Glyph="{dx:DXImage Image=New_16x16.png}" LargeGlyph="{dx:DXImage Image=New_32x32.png}" ItemClick="NewC1Item_OnItemClick"/>
                     </dxr:RibbonPageGroup>
                 </dxr:RibbonPage>
             </dxr:RibbonDefaultPageCategory>

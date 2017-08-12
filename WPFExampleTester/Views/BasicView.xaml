@@ -38,6 +38,7 @@
             </DataGrid>
 
             <Button Grid.Row="1" Grid.Column="0" Content="Randomize" Command="{Binding Randomize}" />
+            <TextBox Grid.Row="2" Grid.Column="0" Text="{Binding Frequency}"></TextBox>
         </StackPanel>
     </Grid>
 </UserControl>

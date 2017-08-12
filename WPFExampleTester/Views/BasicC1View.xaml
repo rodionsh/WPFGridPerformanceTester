@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="WPFGridPerformanceTester.Views.BasicC1View"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPFGridPerformanceTester.Views"
+             xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+             xmlns:viewmodelds="clr-namespace:WPFGridPerformanceTester.ViewModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="550" d:DesignWidth="300">
+    <UserControl.DataContext>
+        <viewmodelds:BasicGenericViewModel/>
+    </UserControl.DataContext>
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <c1:C1DataGrid
+                ItemsSource="{Binding Data}"
+                Height="500"
+                ShowGroupingPanel="False"
+                CanUserAddRows="False"
+                CanUserEditRows="False"
+                CanUserFilter="False"
+                CanUserGroup="False"
+                CanUserResizeColumns="False"
+                CanUserResizeRows="False"
+                ShowVerticalFreezingSeparator="None"
+                CanUserSort="True"
+                ColumnWidth="55">
+                </c1:C1DataGrid>
+            <Button Content="Randomize" Click="ButtonBase_OnClick"/>
+            <TextBox Text="{Binding Frequency}"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

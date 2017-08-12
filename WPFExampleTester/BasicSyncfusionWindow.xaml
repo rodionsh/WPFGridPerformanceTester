@@ -1,0 +1,15 @@
+﻿<Window x:Class="WPFGridPerformanceTester.BasicSyncfusionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFGridPerformanceTester"
+        xmlns:views="clr-namespace:WPFGridPerformanceTester.Views"
+        mc:Ignorable="d"
+        Title="BasicSyncfusionWindow" Height="600" Width="900">
+    <Grid>
+        <views:BasicSyncfusionView x:Name="ABook" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10"/>
+        <views:BasicSyncfusionView x:Name="BBook" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10"/>
+        <views:BasicSyncfusionView x:Name="CBook" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
+    </Grid>
+</Window>

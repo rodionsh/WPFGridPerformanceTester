@@ -5,6 +5,7 @@ using System.Windows.Data;
 using System.Collections.ObjectModel;
 using WPFExampleTester.Models;
 using System.Windows.Forms;
+using DevExpress.Data;
 
 namespace WPFExampleTester.ViewModels
 {
@@ -62,6 +63,28 @@ namespace WPFExampleTester.ViewModels
                 return _bookView;
             }
         }
+
+        private string frequency;
+
+        public string Frequency
+        {
+            get
+            {
+                if (frequency == null)
+                {
+                    frequency = string.Empty;
+                }
+                return frequency;
+            }
+            set
+            {
+                if (frequency != value)
+                {
+                    frequency = value;
+                    RaisePropertyChanged(nameof(Frequency));
+                }
+            }
+        }
         #endregion
 
         #region Commands
@@ -72,6 +95,9 @@ namespace WPFExampleTester.ViewModels
         Random random;
 
         Timer timer;
+
+        private DateTime lastUpdate;
+        private int generated;
         #endregion
 
         #region Initialization
@@ -121,7 +147,14 @@ namespace WPFExampleTester.ViewModels
                     uiContext.Send(x => BookView[index] = (new BookLine { BWork = random.Next(999), Bids = random.Next(50, 1000), Price = random.Next(40000, 90000), Asks = random.Next(50, 1000), AWork = random.Next(999) }), null);
                 }
             }
-
+            var timeDif = DateTime.Now - lastUpdate;
+            if (timeDif.TotalSeconds > 1)
+            {
+                Frequency = $"{generated / timeDif.TotalSeconds:F2} updates/second";
+                generated = 0;
+                lastUpdate = DateTime.Now;
+            }
+            generated++;
             IsUpdatesDXLocked = false;
         }
 

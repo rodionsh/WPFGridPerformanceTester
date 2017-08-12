@@ -1,0 +1,16 @@
+﻿<Window x:Class="WPFGridPerformanceTester.BasicTelerikWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFGridPerformanceTester"
+        xmlns:views="clr-namespace:WPFGridPerformanceTester.Views"
+        mc:Ignorable="d"
+        Title="BasicTelerikWindow" Height="600" Width="700"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <views:BasicTelerikView x:Name="ABook" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10"/>
+        <views:BasicTelerikView x:Name="BBook" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10"/>
+        <views:BasicTelerikView x:Name="cBook" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
+    </Grid>
+</Window>

@@ -1,0 +1,52 @@
+﻿<Window x:Class="WPFGridPerformanceTester.BasicWindowMultiThreaded"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFGridPerformanceTester"
+        xmlns:viewmodels="clr-namespace:WPFGridPerformanceTester.ViewModels"
+        mc:Ignorable="d"
+        Title="BasicWindowMultiThreaded" Height="600" Width="700"
+        WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <viewmodels:BasicMutithreadedDataSet x:Key="DataSet"/>
+    </Window.Resources>
+    <Grid>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center" Width="200" Margin="10">
+            <DataGrid x:Name="AGrid" Height="500" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="BWork" Binding="{Binding BWork}" />
+                    <DataGridTextColumn Header="Bids" Binding="{Binding Bids}" />
+                    <DataGridTextColumn Header="Price" Binding="{Binding Price}" />
+                    <DataGridTextColumn Header="Asks" Binding="{Binding Asks}" />
+                    <DataGridTextColumn Header="AWork" Binding="{Binding AWork}" />
+                </DataGrid.Columns>
+                </DataGrid>
+            <CheckBox Content="Randomize" Click="ButtonBase_OnClick1"/>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" Margin="10">
+            <DataGrid x:Name="BGrid" Height="500" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="BWork" Binding="{Binding BWork}" />
+                    <DataGridTextColumn Header="Bids" Binding="{Binding Bids}" />
+                    <DataGridTextColumn Header="Price" Binding="{Binding Price}" />
+                    <DataGridTextColumn Header="Asks" Binding="{Binding Asks}" />
+                    <DataGridTextColumn Header="AWork" Binding="{Binding AWork}" />
+                </DataGrid.Columns>
+            </DataGrid>
+            <CheckBox Content="Randomize" Click="ButtonBase_OnClick2"/>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Right" VerticalAlignment="Center" Width="200" Margin="10">
+            <DataGrid x:Name="CGrid" Height="500" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="BWork" Binding="{Binding BWork}" />
+                    <DataGridTextColumn Header="Bids" Binding="{Binding Bids}" />
+                    <DataGridTextColumn Header="Price" Binding="{Binding Price}" />
+                    <DataGridTextColumn Header="Asks" Binding="{Binding Asks}" />
+                    <DataGridTextColumn Header="AWork" Binding="{Binding AWork}" />
+                </DataGrid.Columns>
+            </DataGrid>
+            <CheckBox Content="Randomize" Click="ButtonBase_OnClick3"/>
+        </StackPanel>
+    </Grid>
+</Window>

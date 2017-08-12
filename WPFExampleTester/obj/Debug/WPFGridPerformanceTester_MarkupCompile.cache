@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Projects\Workspace\WPFExampleTester\WPFExampleTester\obj\Debug\
+D:\GIT\WPFGridPerformanceTesterOriginal\WPFExampleTester\obj\Debug\
 WPFGridPerformanceTester
 none
 false
 DEBUG;TRACE
-C:\Projects\Workspace\WPFExampleTester\WPFExampleTester\App.xaml
-5-1499248652
+D:\GIT\WPFGridPerformanceTesterOriginal\WPFExampleTester\App.xaml
+142107514146
 
-14-627056560
-261839184623
-BasicDXWindow.xaml;BasicWindow.xaml;MainWindow.xaml;Views\BasicView.xaml;Views\BasicDXView.xaml;
+27-1614019080
+43946749678
+BasicC1Window.xaml;BasicDXOptimizedWindow.xaml;BasicDXWindow.xaml;BasicSyncfusionWindow.xaml;BasicTelerikWindow.xaml;BasicWindow.xaml;BasicWindowMultiThreaded.xaml;MainWindow.xaml;Views\BasicC1View.xaml;Views\BasicDXOptimizedView.xaml;Views\BasicSyncfusionView.xaml;Views\BasicTelerikView.xaml;Views\BasicView.xaml;Views\BasicDXView.xaml;
 
 False
 

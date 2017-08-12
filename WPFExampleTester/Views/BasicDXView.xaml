@@ -64,6 +64,9 @@
                     <dxlc:LayoutItem>
                         <dx:SimpleButton Content="Randomize" Command="{Binding Randomize}" />
                     </dxlc:LayoutItem>
+                    <dxlc:DataLayoutItem>
+                        <dxe:TextEdit Text="{Binding Frequency}"/>
+                    </dxlc:DataLayoutItem>
                 </dxlc:LayoutGroup>
             </dxlc:LayoutGroup>
         </dxlc:LayoutControl>

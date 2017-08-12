@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="WPFGridPerformanceTester.Views.BasicSyncfusionView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPFGridPerformanceTester.Views"
+             xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+             xmlns:viewmodels="clr-namespace:WPFGridPerformanceTester.ViewModels"
+             mc:Ignorable="d"
+             d:DesignHeight="530" d:DesignWidth="300">
+    <!--<UserControl.DataContext>
+        <viewmodels:BasicSyncfusionModel/>
+    </UserControl.DataContext>-->
+
+    <Grid>
+        <Grid.Resources>
+            <ResourceDictionary>
+                <ResourceDictionary.MergedDictionaries>
+                    <ResourceDictionary Source="/Syncfusion.SfGrid.WPF;component/Styles/Styles.xaml"/>
+                </ResourceDictionary.MergedDictionaries>
+            </ResourceDictionary>
+        </Grid.Resources>
+        <StackPanel Orientation="Vertical">
+            <syncfusion:SfDataGrid x:Name="BookControl" 
+                                   Height="500" 
+                                   LiveDataUpdateMode="Default" 
+                                   AutoGenerateColumns="false" 
+                                   AutoGenerateRelations="false" 
+                                   CanUseViewFilter="True"
+                                   UseDrawing="Default">
+                <!--ItemsSource="{Binding Data}">-->
+                <!--<syncfusion:SfDataGrid.SortColumnDescriptions>
+                    <syncfusion:SortColumnDescription ColumnName="Price" SortDirection="Descending"/>
+                </syncfusion:SfDataGrid.SortColumnDescriptions>-->
+                <syncfusion:SfDataGrid.Columns>
+                    <syncfusion:GridTextColumn MappingName="BWork" Width="50"/>
+                    <syncfusion:GridTextColumn MappingName="Bids" Width="50"/>
+                    <syncfusion:GridTextColumn MappingName="Price" Width="50"/>
+                    <syncfusion:GridTextColumn MappingName="Asks" Width="50"/>
+                    <syncfusion:GridTextColumn MappingName="AWork" Width="50"/>
+                </syncfusion:SfDataGrid.Columns>
+            </syncfusion:SfDataGrid>
+            <Button Content="Randomize" Click="ButtonBase_OnClick"/>
+            <TextBox Text="{Binding Frequency}"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

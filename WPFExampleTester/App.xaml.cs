@@ -4,6 +4,9 @@ using System.Configuration;
 using System.Data;
 using System.Linq;
 using System.Windows;
+using System.Windows.Interop;
+using System.Windows.Media;
+using Telerik.Windows.Automation.Peers;
 
 namespace WPFExampleTester
 {
@@ -15,6 +18,8 @@ namespace WPFExampleTester
         private void OnAppStartup_UpdateThemeName(object sender, StartupEventArgs e)
         {
             DevExpress.Xpf.Core.ApplicationThemeHelper.UpdateApplicationThemeName();
+            AutomationManager.AutomationMode = AutomationMode.Disabled;
+            RenderOptions.ProcessRenderMode = RenderMode.SoftwareOnly;
         }
     }
 }
